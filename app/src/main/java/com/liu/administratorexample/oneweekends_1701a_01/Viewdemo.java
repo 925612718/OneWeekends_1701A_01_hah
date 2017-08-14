@@ -13,7 +13,6 @@ import android.view.View;
 
 public class Viewdemo extends View{
 
-
     public Viewdemo(Context context, AttributeSet attrs) {
         super(context, attrs);
     }

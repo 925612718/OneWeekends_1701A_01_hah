@@ -22,22 +22,29 @@ import java.util.List;
 public class Main2Activity extends AppCompatActivity {
     private ListView listview;
     private ViewPager pager;
-    private List<Fragment> list = new ArrayList<>();
-    private List<Student> list1 = new ArrayList<>();
+    private List<Fragment> list=new ArrayList<>();
+    private List<Student> list1=new ArrayList<>();
     private MyAdperdemo adperdemo;
     private MyAdper myAdper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_main);
         initView();
+        initDate();
+        adperdemo = new MyAdperdemo(Main2Activity.this,list1);
+        listview.setAdapter(adperdemo);
+        myAdper = new MyAdper(getSupportFragmentManager());
+        pager.setAdapter(myAdper);
+        pager.setCurrentItem(0);
+
     }
 
     private void initDate() {
-        Student student1 = new Student("个人简介");
-        Student student2 = new Student("个人照片");
-        Student student3 = new Student("加载更多");
+        Student student1=new Student("个人简介");
+        Student student2=new Student("个人照片");
+        Student student3=new Student("加载更多");
         list1.add(student1);
         list1.add(student2);
         list1.add(student3);
@@ -47,7 +54,7 @@ public class Main2Activity extends AppCompatActivity {
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position) {
+                switch (position){
                     case 0:
                         pager.setCurrentItem(0);
 
@@ -68,7 +75,7 @@ public class Main2Activity extends AppCompatActivity {
         pager = (ViewPager) findViewById(R.id.pager);
     }
 
-    private class MyAdper extends FragmentPagerAdapter {
+    private class MyAdper extends FragmentPagerAdapter{
 
 
         public MyAdper(FragmentManager fm) {

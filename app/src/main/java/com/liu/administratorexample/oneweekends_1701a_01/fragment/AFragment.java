@@ -22,7 +22,6 @@ import java.util.List;
  */
 public class AFragment extends Fragment {
 
-
     private RecyclerView recycle;
     private List<Bean.CardBean> list=new ArrayList<>();
     private String url="http://baike.baidu.com/api/openapi/BaikeLemmaCardApi?scope=103&format=json&appid=379020&bk_key=%E9%AB%98%E6%99%93%E6%9D%BE&bk_length=600";

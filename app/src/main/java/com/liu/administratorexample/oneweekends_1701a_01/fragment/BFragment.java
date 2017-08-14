@@ -17,7 +17,6 @@ import com.liu.administratorexample.oneweekends_1701a_01.R;
  */
 public class BFragment extends Fragment {
 
-
     private ImageView src;
 
     public BFragment() {

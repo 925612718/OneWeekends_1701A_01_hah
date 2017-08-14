@@ -38,5 +38,4 @@ public class CFragment extends Fragment {
         return view;
     }
 
-
 }

@@ -31,6 +31,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolders> {
 
         View view = View.inflate(context, R.layout.item1, null);
         holders = new ViewHolders(view);
+
+
         return holders;
 
     }
@@ -38,7 +40,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolders> {
     @Override
     public void onBindViewHolder(ViewHolders holder, int position) {
         holder.title.setText(list.get(position).getName());
-       holder.name1.setText(list.get(position).getValue().get(0));
+        holder.name1.setText(list.get(position).getValue().get(0));
 
 
     }
@@ -61,6 +63,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolders> {
 
         }
     }
+
 
 
 }
